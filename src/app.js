@@ -9,13 +9,15 @@ const compress = require("compression");
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(compress());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // init db
 require("./dbs/init.mongodb");
 
 // const { checkOverload, countConnect } = require("./helpers/check.connect");
 // checkOverload()
 // init routes
-app.use("/", require("./routes/index"));
+app.use("/", require("./routes"));
 // handling errors
 
 module.exports = app;

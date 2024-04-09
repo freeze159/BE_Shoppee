@@ -1,5 +1,6 @@
 "use strict";
 const { model, Schema, Types } = require("mongoose"); // Erase if already required
+const mongoose = require("mongoose");
 
 // Declare the Schema of the Mongo model
 const DOCUMENT_NAME = "Shop";
