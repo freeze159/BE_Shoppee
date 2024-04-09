@@ -12,10 +12,10 @@ app.use(compress());
 // init db
 require("./dbs/init.mongodb");
 
-// const {checkOverload} = require('./helpers/check.connect')
+// const { checkOverload, countConnect } = require("./helpers/check.connect");
 // checkOverload()
 // init routes
-app.use("", require("./routes/index"));
+app.use("/", require("./routes/index"));
 // handling errors
 
 module.exports = app;

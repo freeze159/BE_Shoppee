@@ -4,6 +4,7 @@ const { model, Schema, Types } = require("mongoose"); // Erase if already requir
 // Declare the Schema of the Mongo model
 const DOCUMENT_NAME = "Shop";
 const COLLECTION_NAME = "Shops";
+
 const shopSchema = new Schema(
   {
     name: {
@@ -27,7 +28,6 @@ const shopSchema = new Schema(
       enum: ["active", "inactive"],
       default: "inactive",
     },
-
     verify: {
       type: Schema.Types.Boolean,
       default: "false",
